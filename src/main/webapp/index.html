@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>My AngularJS App</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="app.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular-route.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular-mocks.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-app="PersonApp" ng-controller="PersonController as ctrl">
+    <div class="container">
+        <div>
+            <ul>
+                <li ng-repeat="Person in ctrl.getPersons()">{{Person| name}}</li>
+                
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <login-form></login-form>
+        </div>
+        
+        <div>
+            <ul>
+                <li>
+                    TitleCase: {{ctrl.titleCase("This is a test1")}}
+                
+                </li>
+                <li>
+                    camelCase: {{ctrl.camelCae("This is a test2")}}
+                    
+                </li>
+                
+                <li>
+                    dashCase: {{ctrl.dashCase("This is a test3")}}
+                </li>
+            </ul>
+        </div>
+    </div>
+        <h1>Hello World!</h1>
+    </body>
+</html>
